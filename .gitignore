@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# React & Next.js
+node_modules/
+.next/
+out/
+.cache/
+build/
+
+# Dependency directories
+/.pnp/
+.pnp.js
+
+# Local environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# Compiled output
+/dist
+/out
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+/.sass-cache/
+*.sas*
+.cache/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.AppleDouble
+.DS_Store
