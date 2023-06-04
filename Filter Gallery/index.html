@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="works">
+    <ul>
+      <li class="list active" data-filter="ALL">ALL</li>
+      <li class="list" data-filter="mobile">Mobile</li>
+      <li class="list" data-filter="camera">Camera</li>
+      <li class="list" data-filter="watch">Watch</li>
+      <li class="list" data-filter="shoe">Shoe</li>
+      <li class="list" data-filter="headphone">Headphone</li>
+    </ul>
+
+    <div class="product">
+      <div class="itemBox mobile"><img src="img/img10.jpg"></div>
+      <div class="itemBox camera"><img src="img/img11.jpg"></div>
+      <div class="itemBox watch"><img src="img/img12.jpg"></div>
+      <div class="itemBox shoe"><img src="img/img13.jpg"></div>
+      <div class="itemBox headphone"><img src="img/img14.jpg"></div>
+
+      <div class="itemBox mobile"><img src="img/img10.jpg"></div>
+      <div class="itemBox camera"><img src="img/img11.jpg"></div>
+      <div class="itemBox watch"><img src="img/img12.jpg"></div>
+      <div class="itemBox shoe"><img src="img/img13.jpg"></div>
+      <div class="itemBox headphone"><img src="img/img14.jpg"></div>
+
+      <div class="itemBox mobile"><img src="img/img10.jpg"></div>
+      <div class="itemBox camera"><img src="img/img11.jpg"></div>
+      <div class="itemBox watch"><img src="img/img12.jpg"></div>
+      <div class="itemBox shoe"><img src="img/img13.jpg"></div>
+      <div class="itemBox headphone"><img src="img/img14.jpg"></div>
+
+      <div class="itemBox mobile"><img src="img/img10.jpg"></div>
+      <div class="itemBox camera"><img src="img/img11.jpg"></div>
+      <div class="itemBox watch"><img src="img/img12.jpg"></div>
+      <div class="itemBox shoe"><img src="img/img13.jpg"></div>
+      <div class="itemBox headphone"><img src="img/img14.jpg"></div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.list').click(function(){
+      const value = $(this).attr('data-filter');
+      if (value == 'ALL'){
+        $('.itemBox').show('1000');
+      }
+      else{
+        $('.itemBox').not('.'+value).hide('1000');
+        $('.itemBox').filter('.'+value).show('1000');
+      }
+    })
+
+    $('.list').click(function(){
+      $(this).addClass('active').siblings().removeClass('active');
+    })
+  })
+
+  </script>
+</body>
+</html>
